@@ -6,7 +6,7 @@ public class Main {
 
     public Main(){
        // printAllBoards();
-        //nextBoards();
+       // nextBoards();
         withinOneMove(3,3,3);
    }
 
