@@ -7,7 +7,7 @@ public class Main {
     public Main(){
        // printAllBoards();
        // nextBoards();
-        withinOneMove(3,3,3);
+        withinOneMove(3,2,1);
    }
 
    public void printAllBoards() {
@@ -42,26 +42,26 @@ public class Main {
     public void withinOneMove(int a, int b , int c){
         System.out.println("start board: "+a+""+b+""+c);
         if (c>0){
-            for (int x=1; x<4; x++) {
-                System.out.println(a+ ""+b+""+(c-x));
+            for (int x=1; x<(c+1); x++) {
+               System.out.println(a + "" + b + "" + (c-x));
             }
         }
         if (b>0){
             int redC=c;
-            for (int x=1; x<4; x++){
+            for (int x=1; x<(b+1); x++){
                 if ((b-x)>=c){
                     redC=c;
                 } else if ((b-x)<c){
                     redC=(b-x);
-                    }
+                }
                 System.out.println(a+""+(b-x)+ ""+redC);
             }
         }
         if (a>0){
             int redB=b;
             int redC=c;
-            for (int x=1; x<4; x++){
-                if (a==b || a<b){
+            for (int x=1; x<(a+1); x++){
+                if (a==b || (a-x)<b){
                     redB=(a-x);
                 } else if (a>b){
                     redB=b;
